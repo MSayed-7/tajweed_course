@@ -144,10 +144,20 @@ ul{
 }
 .header .main-nav {
     display: flex;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
+.main-nav li a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+}
+
 @media (max-width: 767px) {
     .header .main-nav {
     margin: auto;
+    display: none;
 }
 }
 .header .main-nav > li:hover .mega-menu {
@@ -259,6 +269,7 @@ ul{
 .header .mega-menu .links li a i {
     margin-right: 10px;
 }
+
 /* End Header */
 /* Start landing */ 
 .landing {
@@ -832,7 +843,7 @@ ul{
 }
 .testimonials .container .box img {
     position: absolute;
-    left: -10px;
+    left: -5px;
     top: -50px;
     width: 100px;
     border-radius: 50%;
@@ -1187,6 +1198,11 @@ padding-bottom: 14px;
     margin: 20px auto;
     gap: 10px;
     justify-content: center;
+}
+@media(max-width : 767px){
+    .registration .container .info .time{
+        flex-direction: column;
+    }
 }
 .registration .container .info .time .unit {
     border: 1px solid #d4d4d4;
@@ -1573,7 +1589,8 @@ main p {
     }
 @media(max-width : 768px){
     .contact-btn{
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
     }
 }
@@ -1594,13 +1611,14 @@ main p {
 }
 
 .contact-btn.phone {
-  background: #2196f3;
+    background: #2196f3;
 }
 
 .contact-btn.phone:hover {
-  background: #1976d2;
+    background: #1976d2;
 }
 /* end contact */
+
 /* Start Footer */
 .footer {
     position: relative;
@@ -1631,6 +1649,13 @@ main p {
     color: white;
     margin: 10px 0 ;
 }
+@media (min-width: 768px) {
+    .footer .container .footer-nav a {
+        flex-direction: row;
+    }
+}
+/* end footer */
+
 @media (max-width: 768px) {
     .footer .container {
         flex-direction: column;   /* يخليهم تحت بعض */
